@@ -35,6 +35,7 @@ import com.sun.jna.platform.win32.User32;
 import com.sun.jna.platform.win32.WinDef.DWORD;
 import com.sun.jna.platform.win32.WinDef.HWND;
 
+import application.testVO;
 import javafx.beans.value.ObservableValue;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -73,20 +74,20 @@ public class inputAccountCodeToScript implements Initializable,  NativeKeyListen
 	
 	@FXML
 	private VBox titleBar;
-	
-	@FXML
-	private Button setProductBtn;
-	
-	@FXML
-	private Button setAccountBtn;
-	
-	@FXML
-	private Button setStartBtn;
-	
-	@FXML
-	private TabPane subTab;
-	
-	@FXML
+  	
+  	@FXML
+  	private Button setProductBtn;
+  	
+  	@FXML
+  	private Button setAccountBtn;
+  	
+  	@FXML
+  	private Button setStartBtn;
+  	
+  	@FXML
+  	private TabPane subTab;
+  	
+  	@FXML
 	private TextField productTxt;
 	
 	@FXML
@@ -123,6 +124,7 @@ public class inputAccountCodeToScript implements Initializable,  NativeKeyListen
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		
 		// TODO Auto-generated method stub
 		addDragListeners(titleBar);
 		addActionListeners(setProductBtn);
@@ -217,8 +219,8 @@ public class inputAccountCodeToScript implements Initializable,  NativeKeyListen
 			                //String windowTitle = Wmethod.getWindowname(hwnd);
 			                System.out.println((windowTitle));
 			                //ewWindow.setTitle(windowTitle);
-							JFrame jf = new JFrame(windowTitle);
-							jf.setVisible(true);
+							//JFrame jf = new JFrame(windowTitle);
+							//jf.setVisible(true);
 						/*} catch (IOException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
@@ -263,13 +265,15 @@ public class inputAccountCodeToScript implements Initializable,  NativeKeyListen
 									className = Wmethod.getClassname(childHwnd);																		
 									windowName = Wmethod.getWindowname(childHwnd);																		
 									
+									className = className == null ? "" : className;
+									
 									if (className.equals("SPR32DU80EditHScroll") && libUser32.IsWindowVisible(childHwnd)){
 										//stateTxt.appendText("ClassName: " +className + "\t" + "WindowName: "+ windowName + "\t" + "Time: " + LocalDateTime.now() + "\n");
 										productCellText.setText(childHwnd.toString());										
 										mainFormText.setText(libUser32.GetAncestor(childHwnd, 1).toString());
 										
-										createWindow(childHwnd);
-										findWindowQuit= false;
+										//createWindow(childHwnd);
+										//findWindowQuit= false;
 
 									}
 									else if (className.equals("#32770") && windowName.equals("57.매입카과")){										
@@ -277,6 +281,8 @@ public class inputAccountCodeToScript implements Initializable,  NativeKeyListen
 										cardTabText.setText(childHwnd.toString());
 									}
 									
+									
+									//stateTxt.appendText(className);
 									
 									//System.err.println(windowName + "       "+ LocalDateTime.now());
 								} while (!mainHwnd.equals(childHwnd) && childHwnd != null);
