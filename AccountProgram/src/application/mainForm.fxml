@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="mainFormPane" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.mainFormController">
+   <children>
+      <BorderPane maxHeight="768.0" maxWidth="1024.0" minHeight="768.0" minWidth="1024.0" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #d2e097; -fx-border-color: #d2e097;">
+         <center>
+            <TabPane prefHeight="719.0" prefWidth="1022.0" style="-fx-background-color: #f9faef; -fx-border-color: #d2e097; -fx-tab-min-height: 25; -fx-tab-min-width: 80; -fx-focus-traversable: false;" stylesheets="@tabPane.css" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab text="회계관리">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #f9faef;">
+                           <children>
+                              <GridPane hgap="20.0" layoutX="1.0" prefHeight="529.0" prefWidth="846.0" vgap="20.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" percentHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" percentHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" percentHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" percentHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <VBox focusTraversable="true" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #e4ead2;" GridPane.rowSpan="2">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="275.0" stylesheets="@label.css" text="외상대 입력기" textFill="#6f8001">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding></Label>
+                                          <ListView id="listView1Tab1" fx:id="listView1Tab1" prefHeight="298.0" prefWidth="229.0" style="-fx-background-color: #f9faef;" stylesheets="@listView.css">
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <VBox.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </VBox.margin></ListView>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #e4ead2;" GridPane.columnIndex="1" GridPane.rowSpan="2">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="270.0" stylesheets="@label.css" text="적요 입력기" textFill="#6f8001">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Label>
+                                          <ListView fx:id="listView2Tab1" prefHeight="298.0" prefWidth="229.0" style="-fx-background-color: #f9faef;" stylesheets="@listView.css">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                             <VBox.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </VBox.margin></ListView>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #e4ead2;" GridPane.rowIndex="2" GridPane.rowSpan="2">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="264.0" style="-fx-background-color: #e4ead2;" stylesheets="@label.css" text="초성검색기" textFill="#6f8001">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Label>
+                                          <ListView fx:id="listView4Tab1" prefHeight="298.0" prefWidth="229.0" style="-fx-background-color: #f9faef;" stylesheets="@listView.css">
+                                             <VBox.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </VBox.margin></ListView>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #e4ead2;" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.rowSpan="2">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="15.0" prefWidth="247.0" stylesheets="@label.css" text="업무용승용차운행기록부" textFill="#6f8001">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Label>
+                                          <ListView fx:id="listView5Tab1" prefHeight="298.0" prefWidth="229.0" style="-fx-background-color: #f9faef;" stylesheets="@listView.css">
+                                             <VBox.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </VBox.margin></ListView>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #e4ead2;" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.rowSpan="2">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="252.0" stylesheets="@label.css" textFill="#6f8001">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Label>
+                                          <ListView fx:id="listView6Tab1" prefHeight="298.0" prefWidth="229.0" style="-fx-background-color: #f9faef;" stylesheets="@listView.css">
+                                             <VBox.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </VBox.margin></ListView>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #e4ead2;" GridPane.columnIndex="3" GridPane.rowIndex="2" GridPane.rowSpan="2">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="258.0" stylesheets="@label.css" text="기초정보관리" textFill="#6f8001">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Label>
+                                          <ListView fx:id="listView7Tab1" prefHeight="298.0" prefWidth="229.0" style="-fx-background-color: #f9faef;" stylesheets="@listView.css" />
+                                       </children>
+                                    </VBox>
+                                    <WebView fx:id="webViewYouTube" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" />
+                                    <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #e4ead2;" GridPane.columnIndex="2" GridPane.rowSpan="2">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="270.0" stylesheets="@label.css" text="업무용승용차운행기록부" textFill="#6f8001">
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Label>
+                                          <ListView fx:id="listView3Tab1" prefHeight="294.0" prefWidth="229.0" style="-fx-background-color: #f9faef;" stylesheets="@listView.css">
+                                             <VBox.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </VBox.margin></ListView>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </GridPane>
+                           </children>
+                           <padding>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </padding>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="부가가치">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #f9faef;">
+                           <children>
+                              <GridPane hgap="20.0" layoutX="1.0" prefHeight="529.0" prefWidth="846.0" vgap="20.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #6f8001; -fx-border-color: #e4ead2;" GridPane.rowSpan="2">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="275.0" stylesheets="@label.css" text="외상대 입력기" textFill="#6f8001">
+                                             <font>
+                                                <Font name="HYHeadLine-Medium" size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Label>
+                                          <ListView focusTraversable="false" style="-fx-background-color: #f9faef;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #e4ead2;" GridPane.columnIndex="1" GridPane.rowSpan="2">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="270.0" stylesheets="@label.css" text="예수금 입력기" textFill="#6f8001">
+                                             <font>
+                                                <Font name="HCR Dotum Bold" size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Label>
+                                          <ListView focusTraversable="false" style="-fx-background-color: #f9faef;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #e4ead2;" GridPane.columnIndex="2" GridPane.rowSpan="2">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="261.0" stylesheets="@label.css" text="적요 입력기" textFill="#6f8001">
+                                             <font>
+                                                <Font name="HCR Dotum Bold" size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Label>
+                                          <ListView focusTraversable="false" style="-fx-background-color: #f9faef;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #e4ead2;" GridPane.rowIndex="2" GridPane.rowSpan="2">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="264.0" style="-fx-background-color: #e4ead2;" stylesheets="@label.css" text="초성검색기" textFill="#6f8001">
+                                             <font>
+                                                <Font name="HCR Dotum Bold" size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Label>
+                                          <ListView focusTraversable="false" style="-fx-background-color: #f9faef;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #e4ead2;" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.rowSpan="2">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="15.0" prefWidth="247.0" stylesheets="@label.css" text="업무용승용차운행기록부" textFill="#6f8001">
+                                             <font>
+                                                <Font name="HCR Dotum Bold" size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Label>
+                                          <ListView focusTraversable="false" style="-fx-background-color: #f9faef;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #e4ead2;" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.rowSpan="2">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="252.0" stylesheets="@label.css" textFill="#6f8001">
+                                             <font>
+                                                <Font name="HCR Dotum Bold" size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Label>
+                                          <ListView focusTraversable="false" style="-fx-background-color: #f9faef;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #e4ead2;" GridPane.columnIndex="3" GridPane.rowIndex="2" GridPane.rowSpan="2">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="258.0" stylesheets="@label.css" text="기초정보관리" textFill="#6f8001">
+                                             <font>
+                                                <Font name="HCR Dotum Bold" size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Label>
+                                          <ListView focusTraversable="false" style="-fx-background-color: #f9faef;" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" percentHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" percentHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" percentHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" percentHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                           <padding>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </padding>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+         <bottom>
+            <ToolBar prefHeight="3.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
+              <items>
+                <Button fx:id="btn" mnemonicParsing="false" onAction="#test" text="Button" />
+                  <TextField fx:id="txt" />
+              </items>
+            </ToolBar>
+         </bottom>
+         <top>
+            <VBox fx:id="titleBar" prefHeight="30.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="30.0" prefWidth="1024.0" style="-fx-background-color: #d2e097;">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="650.0">
+                           <children>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@cat.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="회계사랑" />
+                           </children>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="15.0" prefWidth="401.0">
+                           <children>
+                              <Button fx:id="trayIcon" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: #d2e097;">
+                                 <graphic>
+                                    <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@trayIcon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </Button>
+                              <Button fx:id="exitIcon" alignment="CENTER" contentDisplay="CENTER" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: #d2e097;">
+                                 <graphic>
+                                    <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@exitIcon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </Button>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

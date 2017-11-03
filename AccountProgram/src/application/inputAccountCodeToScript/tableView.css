@@ -1,0 +1,71 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.root{
+    -fx-background-color: #e4ead2;
+}
+
+.table-view{
+   -fx-background-color: #e4ead2;
+}
+
+.table-view:focused{
+    -fx-background-color: #e4ead2;
+}
+
+
+.table-view .column-header-background{
+    -fx-background-color: #e4ead2;
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: #e4ead2;
+    -fx-text-fill: #6f8001;
+}
+
+.table-view .column-header {
+    -fx-background-color: #e4ead2;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: black;
+}
+
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color, #f9faef;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, #f9faef;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */  
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #e4ead2;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+.table-row-cell:selected .tissue-cell {
+
+}
+
+.table-row-cell {
+    -fx-cell-size: 25px;
+}
+
+.table-row-cell:selected .table-cell {
+    -fx-background-color: #d2e097;
+    -fx-text-fill: black;
+    -fx-border-color: #d2e097;
+}
+
+.text-field-table-cell .text-field {
+   -fx-padding: 1;  
+   -fx-background-color:white;
+}
+.table-cell:focused {
+   -fx-padding: 0;
+}

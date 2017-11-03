@@ -1,0 +1,8 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.label {
+
+    -fx-background-color :  #e4ead2;
+	-fx-text-fill :  #6f8001;
+    -fx-padding: 5 5 5 5;  
+}
